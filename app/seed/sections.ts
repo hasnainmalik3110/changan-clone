@@ -1,4 +1,5 @@
-// app/seed/sections.ts
+
+
 export const sections = [
   {
     type: 'video',

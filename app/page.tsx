@@ -15,7 +15,7 @@ export default function Home() {
             return (
               <SectionVideo
                 key={index}
-                src={section.src}
+                src={section.src!}
                 overlayText={section.overlayText}
                 overlaySize={section.overlaySize}
               />
@@ -24,13 +24,13 @@ export default function Home() {
             return (
               <SectionCar
                 key={index}
-                img={section.img}
-                title={section.title}
-                description={section.description}
+                img={section.img!}
+                title={section.title!}
+                description={section.description!}
               />
             )
           case 'image':
-            return <SectionImage key={index} src={section.src} alt={section.alt} />
+            return <SectionImage key={index} src={section.src!}/>
           default:
             return null
         }
