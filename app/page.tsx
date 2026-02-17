@@ -38,8 +38,9 @@ export default function Home() {
       
       {/* Footer acts as the last section */}
       <div className="h-screen flex flex-col justify-end snap-start">
-         <Footer />
-      </div>
+  <Footer />
+</div>
+
     </div>
   )
 }

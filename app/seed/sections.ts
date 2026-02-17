@@ -3,7 +3,7 @@ export const sections = [
   {
     type: 'video',
     src: '/videos/changanVideo.mp4',
-    overlayText: 'Découvrez Changan',
+    overlayText: '',
     overlaySize: 'text-5xl md:text-6xl font-bold',
   },
   {
