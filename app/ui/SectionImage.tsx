@@ -1,11 +1,23 @@
+'use client'
 import Image from 'next/image'
 
-export default function SectionImage({ src, alt }: { src?: string; alt?: string }) {
-  if (!src) return null // don't render if src is missing
+interface SectionImageProps {
+  src?: string
+  alt?: string
+}
+
+export default function SectionImage({ src, alt }: SectionImageProps) {
+  if (!src) return null
 
   return (
-    <section className="w-screen h-screen relative">
-      <Image src={src} alt={alt || 'section-image'} fill className="object-cover" />
+    <section className="relative w-screen h-screen overflow-hidden">
+      <Image
+        src={src}
+        alt={alt || 'section-image'}
+        fill
+        className="object-cover"
+        unoptimized
+      />
     </section>
   )
 }

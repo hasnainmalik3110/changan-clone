@@ -1,15 +1,51 @@
 @import "tailwindcss";
 
-html, body, #__next {
-  height: 100%;
-  width: 100%;
-}
-.scroll-snap {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
+:root {
+  --changan-red: #D52106;
+  --changan-dark: #0B1016;
 }
 
-.scroll-snap > section {
+
+@keyframes waveMove {
+  0% { transform: translateX(-20%); }
+  100% { transform: translateX(20%); }
+}
+
+.wave-animation {
+  animation: waveMove 12s ease-in-out infinite alternate;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+
+  color: white;
+  overflow: hidden; /* Prevent double scrollbars */
+}
+
+/* The Scroll Container */
+.scroll-snap {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Sections */
+.scroll-snap > section, 
+.scroll-snap > footer {
   scroll-snap-align: start;
+  width: 100%;
+}
+
+/* Animation Utilities */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

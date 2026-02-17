@@ -1,3 +1,4 @@
+// app/ui/Footer.tsx
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-6 px-8 flex flex-col md:flex-row justify-between items-center">
